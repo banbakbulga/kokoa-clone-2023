@@ -1,0 +1,77 @@
+.logIn-body {
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.718), rgba(0, 162, 255, 0.455));
+}
+
+input[type='text'],
+input[type='password'] {
+    background-color: transparent;
+}
+
+.welcome-header {
+    margin: 90px 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+
+.welcome-header__title {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.welcome-header__text {
+    width: 60%;
+    opacity: 0.7;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 30px;
+}
+
+#login-form input {
+    border: none;
+    padding: 10px 0px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input:not([type='submit']) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+/*위의 로그인폼은 input에만 적용되기 때문에 placeholder만의 속성을 변경시켜주기 위해 위돠 같이 씀*/
+
+/*reset.css로 가보면 focus시 input의 아웃라인을 지워주는 코드를 작성했다.*/
+
+#login-form input:focus {
+    border-color: rgba(0, 102, 255, 0.596);
+}
+
+#login-form input[type='submit'] {
+    background-color: var(--yellow);
+    cursor: pointer;
+    padding: 20px 0px;
+    border-radius: 5px;
+}
+
+#login-form a {
+    text-align: center;
+    text-decoration: none;
+    /*링크 밑줄 삭제*/
+    color: inherit;
+    font-size: 13px;
+}
+
+.submitBtn {
+    color: white;
+}

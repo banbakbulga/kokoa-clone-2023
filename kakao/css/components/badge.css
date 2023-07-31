@@ -1,0 +1,24 @@
+.badge {
+    background-color: tomato;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    /*이것은 span이기 때문에 위의 너비과 높이가 적용x 따라서 display가 필요함*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+
+.badge-sm {
+    background-color: tomato;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -5px; /* 원하는 위치로 조정 가능 */
+    right: -5px; /* 원하는 위치로 조정 가능 */
+}

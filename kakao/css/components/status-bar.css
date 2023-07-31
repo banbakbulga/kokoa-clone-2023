@@ -1,0 +1,32 @@
+.status-bar {
+    display: flex;
+    /*3개를 같은 줄에*/
+    justify-content: center;
+    /*3개를 일정하게 떨어뜨려 두기 위해서 justify-content:space-between을 쓸수도 있지만
+    그러면 No Service가 너무 길어서 시계가 정중앙에 있지 않는 문제가 생긴다.*/
+    padding: 5px 3px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.status-bar__column {
+    width: 33%;
+}
+.status-bar__column:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+.status-bar__column:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.status-bar__column .fa-battery-quarter {
+    margin: 0px 5px;
+}
+
+.status-bar__column:first-child span {
+    margin-right: 5px;
+    /*No Service와 와이파이 아이콘 사이의 간격*/
+}
