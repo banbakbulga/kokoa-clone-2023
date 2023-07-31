@@ -1,0 +1,34 @@
+.screen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*교차축 기준 가운데 정렬*/
+    padding: 35px 20px;
+    margin-bottom: 15px;
+}
+
+.screen-header__title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.screen-header__icons span {
+    margin-left: 25px;
+    /*아이콘들의 간격을 벌려주기 위함*/
+}
+.screen-header__icons {
+    position: relative;
+}
+
+@keyframes rotateCog {
+    from {
+        transform: none;
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.screen-header__icons .fa-gear:hover {
+    animation: rotateCog 1s linear infinite;
+}

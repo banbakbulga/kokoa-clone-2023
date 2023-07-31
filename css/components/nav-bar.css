@@ -1,0 +1,75 @@
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9f9fa;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(122, 119, 119, 0.3);
+}
+
+.nav__list {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+/*nav__link는 reset에 a에 대한 속성을 써 놨음*/
+.nav__link {
+    color: #2e363e;
+    display: inline-block;
+    position: relative;
+}
+
+.nav__notification__gear {
+    position: absolute;
+}
+
+@keyframes noticationAnimation {
+    0% {
+        transform: none;
+    }
+    50% {
+        transform: translateY(-5px) rotatey(360deg);
+    }
+    100% {
+        transform: none;
+    }
+}
+
+.nav__notification {
+    position: absolute;
+    /*position:absolute는 가장 가까운 ralative를 가진 부모 기준으로 움직인다*/
+    bottom: 15px;
+    left: 15px;
+    animation: noticationAnimation 2s ease-in-out infinite;
+}
+
+@keyframes appearBtnAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.nav__btn {
+    transform: translateY(20px);
+    /*이걸 여기 넣어줘야 뒤에 있는 아이콘들도 아래에서 올라온다*/
+    opacity: 0;
+    animation: appearBtnAnimation 0.3s ease-in-out forwards;
+}
+
+.nav__btn:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.nav__btn:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.nav__btn:last-child {
+    animation-delay: 0.6s;
+}
